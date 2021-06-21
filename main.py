@@ -74,17 +74,25 @@ class For:
         # promedio = acum/longitud
         # print("Total notas:{} - #Notas:{} - Promedio:{}".format(acum, longitud, promedio))
 
-        lista_estudiante = [{"nombre": "Erick", "final": 70}, {"nombre": "Yady", "final": 60}, {"nombre": "Danny", "final": 90}]
-        acum = 0
-        contador = 0
-        for estudiantes in lista_estudiante:
-            print(estudiantes)
-            for llave, valor in estudiantes.items():
-                print(str(llave) + ":" + str(valor), end="")
-                if llave == "final": acum += valor
-                print("")
-            contador += 1
-        print(acum/contador)
+        # lista_estudiante = [{"nombre": "Erick", "final": 70}, {"nombre": "Yady", "final": 60}, {"nombre": "Danny", "final": 90}]
+        # acum = 0
+        # contador = 0
+        # for estudiantes in lista_estudiante:
+        #     print(estudiantes)
+        #     for llave, valor in estudiantes.items():
+        #         print(str(llave) + ":" + str(valor), end="")
+        #         if llave == "final": acum += valor
+        #         print("")
+        #     contador += 1
+        # print(acum/contador)
+
+        # oracion = "Hola como estas"
+        # vocales = []
+        # for carro in oracion:
+        #     if carro in ('a', 'e', 'i', 'o', 'u'):
+        #         vocales.append(carro)
+        # print(vocales)
+        print([carro for carro in "Hola como estas" if carro in ('a', 'e', 'i', 'o', 'u')])
 
 
 obj_for = For()
