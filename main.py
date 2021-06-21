@@ -8,7 +8,6 @@ class For:
         dato = ["Daniel", 50, True]
         numeros = (2, 5.6, 4, 1)
         profesor = {"nombre": "Daniel", "edad": 50, "fac": "faci"}
-        lista_notas = [(30, 40), [20, 40] ,(50, 40)]
         lista_estudiantes = [{"nombre": "Erick", "final": 70}, {"nombre": "Yady", "final": 60}, {"nombre": "Danny", "final": 90}]
 
         # for i in range(5):
@@ -60,6 +59,21 @@ class For:
         # for estudiante in lista_estudiantes:
         #     for llave, valor in estudiante.items():
         #         print(llave + ":" + str(valor), end="  ")
+
+        lista_notas = [(30, 40), [20, 40] ,(50, 40)]
+        acum = 0
+        longitud = 0
+        for notas in lista_notas:
+            parcial = 0
+            print(notas, end=" ")
+            for nota in notas:
+                longitud += 1
+                acum += nota
+                parcial += nota
+            promedio_parcial = parcial/len(notas)
+            print("Notas Parciales:{} - Promedio Parcial:{}".format(parcial, promedio_parcial))
+        promedio = acum/longitud
+        print("Total notas:{} - #Notas:{} - Promedio:{}".format(acum, longitud, promedio))
 
 
 obj_for = For()
